@@ -1,0 +1,14 @@
+How To Git
+
+1. Install git
+2. Bikin repository (di github.com)
+3. Siapkan code yang ingin diupload
+4. git init
+5. VSCode > Source Control (Ctrl + Shift + G) 
+6. Klik tanda (+) / git add test.txt
+7. Isi Message, Klik centang (v)
+8. git remote add origin https://github.com/dewzzjr/coba123.git
+9. git push -u origin master
+
+Jika no 7 gagal bisa ikuti ini 
+https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
