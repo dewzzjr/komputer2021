@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hello {{name}}</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h3>Data Sekolah</h3>
+    <p>berikut adalah data sekolah yang perlu diisi</p>
+    <form action="/input">
+        <label for="fname">Nama</label>
+        <input type="text" name="fname"/><br/>
+        
+        <label for="fgender">Jenis Kelamin</label>
+        <input type="radio" name="fgender" value="0"/>Laki-laki
+        <input type="radio" name="fgender" value="1"/>Perempuan<br/>
+    
+        <label for="fhobi">Hobi</label>
+        <input type="checkbox" name="fhobi" value="Membaca"/>Membaca
+        <input type="checkbox" name="fhobi" value="Menulis"/>Menulis
+        <input type="checkbox" name="fhobi" value="Menulis"/>Olahraga
+        <br/>
+    
+        <input type="submit" value="OK" />
+    </form>
+</body>
+</html>
