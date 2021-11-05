@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import query
 
 # https://flask.palletsprojects.com/en/2.0.x/installation/
 # > mkdir myproject
@@ -33,3 +34,9 @@ def user_page(name=None):
 @app.route("/input", methods=['POST'])
 def input():
     return render_template("input.html")
+
+@app.route("/users")
+def all_user_page():
+    users = query.getall()
+    print(users)
+    return render_template("users.html", data=users)
