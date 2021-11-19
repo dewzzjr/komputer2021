@@ -7,6 +7,13 @@ mydb = mysql.connector.connect(
     database="aplikasi"
 )
 
+# USE aplikasi;
+# CREATE TABLE `users` (
+#   `username` text,
+#   `firstname` text,
+#   `lastname` text,
+#   `password` text
+# );
 
 def insert(username, firstname, lastname, password):
     mycursor = mydb.cursor()
