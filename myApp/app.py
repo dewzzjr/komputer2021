@@ -2,16 +2,17 @@ from flask import Flask, render_template
 import query
 
 # https://flask.palletsprojects.com/en/2.0.x/installation/
-# > mkdir myproject
-# > cd myproject
+# > mkdir myApp
+# > cd myApp
 # > py -3 -m venv venv
 # > venv\Scripts\activate
 # > pip install Flask
+# > set FLASK_APP=hello
 
 app = Flask(__name__)
 
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/
-# > set FLASK_APP=hello
+# > venv\Scripts\activate
 # > flask run
 
 @app.route("/")
@@ -35,8 +36,10 @@ def user_page(name=None):
 def input():
     return render_template("input.html")
 
+# HALAMAN USER HTML
+# menampilkan daftar user yang ada di table users
 @app.route("/users")
 def all_user_page():
     users = query.getall()
-    print(users)
+    # print(users)
     return render_template("users.html", data=users)
