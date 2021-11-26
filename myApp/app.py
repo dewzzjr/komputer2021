@@ -33,7 +33,7 @@ def user_page(name=None):
     return render_template("hello.html", name=name)
 
 @app.route("/input", methods=['POST'])
-def input():
+def input_post():
     return render_template("input.html")
 
 # HALAMAN USER HTML
@@ -43,3 +43,7 @@ def all_user_page():
     users = query.getall()
     # print(users)
     return render_template("users.html", data=users)
+
+@app.route("/input", methods=['GET'])
+def input_get():
+    return render_template("input.html")
